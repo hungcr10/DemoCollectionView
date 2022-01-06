@@ -47,7 +47,7 @@ extension HomeViewController {
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = mainCollectionView.dequeueReusableCell(withReuseIdentifier: Contants.indentifier, for: indexPath) as! HomeCollectionViewCell
-        cell.configure(with: Contants.collection[indexPath.row])
+        cell.configure(with: InfoCollection.collection[indexPath.row])
         cell.numberLabel.text = "\(indexPath.row + 1 )"
         cell.deleteBtn.tag = indexPath.row
         cell.deleteBtn.addTarget(self, action: #selector(deleteCell(sender: )), for: .touchUpInside)
@@ -56,12 +56,12 @@ extension HomeViewController: UICollectionViewDataSource {
     }
    @objc func deleteCell(sender: UIButton) {
         let i = sender.tag
-        Contants.collection.remove(at: i)
+        InfoCollection.collection.remove(at: i)
         mainCollectionView.reloadData()
-       print(Contants.collection)
+       print(InfoCollection.collection)
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Contants.collection.count
+        return InfoCollection.collection.count
     }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
             let header = mainCollectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: Contants.headerIdentifier, for: indexPath) as! HomeHeaderCollectionView
@@ -105,6 +105,6 @@ extension HomeViewController: UIImagePickerControllerDelegate, UINavigationContr
         guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else
         { return }
         picker.dismiss(animated: true, completion: nil)
-        Contants.collection.append(Collection(img: image))
+        InfoCollection.collection.append(Collection(img: image))
     }
 }

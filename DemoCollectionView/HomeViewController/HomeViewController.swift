@@ -1,9 +1,3 @@
-//
-//  HomeViewController.swift
-//  DemoCollectionView
-//
-//  Created by CristianoDaoHung on 06/01/2022.
-//
 
 import UIKit
 
@@ -31,7 +25,6 @@ extension HomeViewController {
         present(picker, animated: true, completion: nil)
         
     }
-    
 }
 //MARK: - Helper
 extension HomeViewController {
@@ -39,7 +32,6 @@ extension HomeViewController {
         mainTextView.text = Contants.titleTextField
         mainTextView.layer.cornerRadius = 15
         addBtn.layer.cornerRadius = 15
-        
     }
     private func registerCollectionViewCell() {
         mainCollectionView.register(UINib(nibName: Contants.nibName, bundle: nil), forCellWithReuseIdentifier: Contants.indentifier)

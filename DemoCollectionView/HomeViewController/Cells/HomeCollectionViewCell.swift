@@ -1,5 +1,4 @@
 
-
 import UIKit
 
 class HomeCollectionViewCell: UICollectionViewCell {
@@ -16,8 +15,6 @@ extension HomeCollectionViewCell {
         super.awakeFromNib()
         setUp()
     }
-    
-    
 }
 //MARK: - Helper
 extension HomeCollectionViewCell {

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -46,15 +47,15 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUB-R8-rlp">
-                                <rect key="frame" x="183" y="5" width="30" height="30"/>
+                                <rect key="frame" x="188" y="5" width="25" height="25"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QYG-6O-Kna">
-                                        <rect key="frame" x="5" y="7" width="20" height="15.5"/>
+                                        <rect key="frame" x="5" y="7" width="15" height="10.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmw-jc-hGb">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -73,8 +74,9 @@
                                     <constraint firstAttribute="trailing" secondItem="jmw-jc-hGb" secondAttribute="trailing" id="PiL-DB-MrJ"/>
                                     <constraint firstAttribute="bottom" secondItem="QYG-6O-Kna" secondAttribute="bottom" constant="5" id="RAP-7l-ALr"/>
                                     <constraint firstAttribute="trailing" secondItem="QYG-6O-Kna" secondAttribute="trailing" constant="5" id="VFa-oh-1md"/>
-                                    <constraint firstAttribute="width" constant="30" id="flr-hc-5EV"/>
+                                    <constraint firstAttribute="width" constant="25" id="flr-hc-5EV"/>
                                     <constraint firstItem="QYG-6O-Kna" firstAttribute="top" secondItem="cUB-R8-rlp" secondAttribute="top" constant="5" id="gvd-EA-B8s"/>
+                                    <constraint firstAttribute="height" constant="25" id="hfl-iK-5ZN"/>
                                     <constraint firstAttribute="bottom" secondItem="jmw-jc-hGb" secondAttribute="bottom" id="uCI-fE-hwB"/>
                                 </constraints>
                             </view>

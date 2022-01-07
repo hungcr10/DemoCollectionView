@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,18 +21,48 @@
                     <color key="textColor" red="1" green="0.67532891640000003" blue="0.15293890700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S4L-QN-cEM">
+                    <rect key="frame" x="256.5" y="5" width="53.5" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHu-ey-yHf">
+                            <rect key="frame" x="5" y="5" width="43.5" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    <constraints>
+                        <constraint firstItem="EHu-ey-yHf" firstAttribute="top" secondItem="S4L-QN-cEM" secondAttribute="top" constant="5" id="5AI-5P-Bit"/>
+                        <constraint firstItem="EHu-ey-yHf" firstAttribute="leading" secondItem="S4L-QN-cEM" secondAttribute="leading" constant="5" id="6Nt-Bd-jvV"/>
+                        <constraint firstAttribute="trailing" secondItem="EHu-ey-yHf" secondAttribute="trailing" constant="5" id="CSL-dy-ACL"/>
+                        <constraint firstItem="EHu-ey-yHf" firstAttribute="centerY" secondItem="S4L-QN-cEM" secondAttribute="centerY" id="Fe0-Mx-3gC"/>
+                        <constraint firstAttribute="bottom" secondItem="EHu-ey-yHf" secondAttribute="bottom" constant="5" id="Os3-P0-e1T"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
             <constraints>
                 <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="XGk-tJ-lek" secondAttribute="bottom" id="32Y-d6-eTS"/>
+                <constraint firstAttribute="trailing" secondItem="S4L-QN-cEM" secondAttribute="trailing" constant="10" id="IBj-6c-m6l"/>
                 <constraint firstAttribute="trailing" secondItem="XGk-tJ-lek" secondAttribute="trailing" id="KxO-Ho-iEo"/>
                 <constraint firstItem="XGk-tJ-lek" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="10" id="b7i-yq-aw5"/>
+                <constraint firstItem="S4L-QN-cEM" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="5" id="dff-Ig-qBR"/>
                 <constraint firstItem="XGk-tJ-lek" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="pPb-tB-lcU"/>
+                <constraint firstAttribute="bottom" secondItem="S4L-QN-cEM" secondAttribute="bottom" constant="5" id="vfq-Wg-hvP"/>
             </constraints>
             <connections>
+                <outlet property="countCollectionLabel" destination="EHu-ey-yHf" id="ctq-j7-9QQ"/>
+                <outlet property="countCollectionView" destination="S4L-QN-cEM" id="HcQ-vv-ASd"/>
                 <outlet property="headerLabel" destination="XGk-tJ-lek" id="9QS-q9-Fpy"/>
             </connections>
             <point key="canvasLocation" x="132" y="50"/>
         </collectionReusableView>
     </objects>
+    <resources>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

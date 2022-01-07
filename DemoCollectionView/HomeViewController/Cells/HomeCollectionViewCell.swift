@@ -34,6 +34,5 @@ extension HomeCollectionViewCell {
 //MARK: - Add Button
 extension HomeCollectionViewCell {
     @IBAction func pressedDeteteCell(_ sender: Any) {
-        print(InfoCollection.collection)
     }
 }

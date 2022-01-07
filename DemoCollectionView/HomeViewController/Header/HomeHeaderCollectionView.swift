@@ -7,10 +7,13 @@
 
 import UIKit
 class HomeHeaderCollectionView: UICollectionReusableView {
+    @IBOutlet weak var countCollectionView: UIView!
+    @IBOutlet weak var countCollectionLabel: UILabel!
     @IBOutlet weak var headerLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        countCollectionView.layer.cornerRadius = 10
     }
+    
 }

@@ -22,7 +22,7 @@ extension HomeViewController {
     @IBAction func pressedAddCollection(_ sender: Any) {
         let picker = UIImagePickerController()
         picker.delegate = self
-        present(picker, animated: true, completion: nil)        
+        present(picker, animated: true, completion: nil)
     }
 }
 //MARK: - Helper
@@ -49,11 +49,11 @@ extension HomeViewController: UICollectionViewDataSource {
         cell.configure(with: InfoCollection.collection[indexPath.row])
         cell.numberLabel.text = "\(indexPath.row + 1 )"
         cell.deleteBtn.tag = indexPath.row
-        cell.deleteBtn.addTarget(self, action: #selector(deleteCell(sender: )), for: .touchUpInside)
+        cell.deleteBtn.addTarget(self, action: #selector(deleteCell(sender:)), for: .touchUpInside)
         mainCollectionView.reloadItems(at: [indexPath])
         return cell
     }
-   @objc func deleteCell(sender: UIButton) {
+    @objc func deleteCell(sender: UIButton) {
         let item = sender.tag
         InfoCollection.collection.remove(at: item)
         mainCollectionView.reloadData()
@@ -62,9 +62,10 @@ extension HomeViewController: UICollectionViewDataSource {
         return InfoCollection.collection.count
     }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-            let header = mainCollectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: Contants.headerIdentifier, for: indexPath) as! HomeHeaderCollectionView
-            header.headerLabel.text = Contants.titleHeaderCollection
-            return header
+        let header = mainCollectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: Contants.headerIdentifier, for: indexPath) as! HomeHeaderCollectionView
+        header.headerLabel.text = Contants.titleHeaderCollection
+        header.countCollectionLabel.text = "\(InfoCollection.collection.count) items"
+        return header
     }
 }
 //MARK: - CollectionViewDelegate

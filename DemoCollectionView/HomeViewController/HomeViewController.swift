@@ -22,8 +22,7 @@ extension HomeViewController {
     @IBAction func pressedAddCollection(_ sender: Any) {
         let picker = UIImagePickerController()
         picker.delegate = self
-        present(picker, animated: true, completion: nil)
-        
+        present(picker, animated: true, completion: nil)        
     }
 }
 //MARK: - Helper
@@ -55,10 +54,9 @@ extension HomeViewController: UICollectionViewDataSource {
         return cell
     }
    @objc func deleteCell(sender: UIButton) {
-        let i = sender.tag
-        InfoCollection.collection.remove(at: i)
+        let item = sender.tag
+        InfoCollection.collection.remove(at: item)
         mainCollectionView.reloadData()
-       print(InfoCollection.collection)
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return InfoCollection.collection.count
@@ -106,5 +104,6 @@ extension HomeViewController: UIImagePickerControllerDelegate, UINavigationContr
         { return }
         picker.dismiss(animated: true, completion: nil)
         InfoCollection.collection.append(Collection(img: image))
+        mainCollectionView.reloadData()
     }
 }
